@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personal Budget Planner — $12.99</title>
+<meta name="description" content="Take control of your money with the Personal Budget Planner — a complete Excel budget system for income, expenses, savings goals and debt tracking.">
+<meta name="keywords" content="personal budget planner, budget spreadsheet, excel budget, money tracker, savings tracker, debt tracker, financial planner">
+<meta property="og:title" content="Personal Budget Planner — $12.99">
+<meta property="og:description" content="A complete Excel budget system to track income, expenses, savings goals and debt in one place.">
+<meta property="og:type" content="product">
+<style>
+:root{
+  --bg:#07111f; --bg2:#0b1830; --card:rgba(255,255,255,.075);
+  --line:rgba(255,255,255,.12); --text:#f7f9fc; --muted:#aeb9ca;
+  --accent:#7c5cff; --accent2:#25d0a6; --gold:#ffd166;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:
+radial-gradient(circle at 15% 0%,rgba(124,92,255,.22),transparent 35%),
+radial-gradient(circle at 90% 15%,rgba(37,208,166,.14),transparent 30%),var(--bg);
+color:var(--text);line-height:1.55}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px,92%);margin:auto}
+.nav{position:sticky;top:0;z-index:20;background:rgba(7,17,31,.78);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.navin{height:70px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:900;letter-spacing:.04em}
+.brand span{color:var(--accent2)}
+.navbtn{padding:11px 18px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.06);font-weight:700}
+.hero{padding:75px 0 55px}
+.grid2{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.badge{display:inline-flex;gap:8px;align-items:center;padding:7px 11px;border:1px solid rgba(124,92,255,.35);background:rgba(124,92,255,.11);border-radius:999px;color:#dcd5ff;font-size:13px;font-weight:800}
+h1{font-size:clamp(42px,6vw,72px);line-height:1.02;letter-spacing:-.055em;margin:18px 0}
+h1 span{background:linear-gradient(90deg,#fff,#bfc9ff);-webkit-background-clip:text;color:transparent}
+.lead{font-size:19px;color:var(--muted);max-width:650px}
+.price{display:flex;align-items:end;gap:10px;margin:25px 0 20px}
+.price strong{font-size:45px;line-height:1}
+.price small{color:var(--muted);margin-bottom:5px}
+.cta{display:inline-flex;justify-content:center;align-items:center;gap:10px;padding:16px 24px;border-radius:14px;background:linear-gradient(135deg,#8b72ff,#6546ef);box-shadow:0 16px 40px rgba(101,70,239,.3);font-weight:900;border:1px solid rgba(255,255,255,.15);transition:.2s}
+.cta:hover{transform:translateY(-2px);box-shadow:0 20px 48px rgba(101,70,239,.42)}
+.subnote{font-size:13px;color:#8996aa;margin-top:10px}
+.mockup{position:relative}
+.glow{position:absolute;inset:10% -5%;background:radial-gradient(circle,rgba(124,92,255,.28),transparent 65%);filter:blur(30px)}
+.screen{position:relative;border:1px solid var(--line);border-radius:24px;background:#f6f8fb;color:#152033;padding:10px;box-shadow:0 30px 80px rgba(0,0,0,.35);transform:rotate(1.2deg)}
+.windowbar{height:26px;display:flex;gap:6px;align-items:center;padding:0 7px}
+.dot{width:8px;height:8px;border-radius:50%;background:#ccd3df}
+.sheet{border-radius:16px;overflow:hidden;border:1px solid #dce3ec;background:#fff}
+.sheettop{padding:18px;background:linear-gradient(135deg,#16233a,#253a5e);color:white}
+.sheettop b{font-size:20px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;padding:12px}
+.kpi{padding:12px;border:1px solid #e3e8ef;border-radius:10px}
+.kpi b{display:block;font-size:15px}.kpi span{font-size:12px;color:#758196}
+.rows{padding:0 12px 15px}.row{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:7px;margin:6px 0}.cell{height:18px;background:#e9edf3;border-radius:4px}.cell.ac{background:#d8f7ee}
+.section{padding:82px 0}
+.section h2{font-size:38px;letter-spacing:-.04em;margin:0 0 12px}
+.sectionlead{color:var(--muted);max-width:720px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+.card{padding:25px;border:1px solid var(--line);background:var(--card);border-radius:20px}
+.icon{font-size:27px}.card h3{margin:12px 0 6px}.card p{margin:0;color:var(--muted)}
+.photo{border-radius:24px;overflow:hidden;border:1px solid var(--line);min-height:360px;background:#111}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.videoCard{margin-top:30px;border:1px solid var(--line);background:var(--card);border-radius:24px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr}
+.videoVisual{min-height:360px;background:
+linear-gradient(135deg,rgba(7,17,31,.1),rgba(7,17,31,.8)),
+url("https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200&q=85") center/cover;
+display:flex;align-items:center;justify-content:center}
+.play{width:78px;height:78px;border-radius:50%;display:grid;place-items:center;background:white;color:#111;font-size:26px;box-shadow:0 15px 50px rgba(0,0,0,.35)}
+.videoText{padding:42px}
+.videoText p{color:var(--muted)}
+.mini{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.tag{padding:8px 11px;border:1px solid var(--line);border-radius:999px;color:#cbd4e2;font-size:13px}
+.preview{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:30px}
+.previewBox{padding:18px;background:#fff;border-radius:18px;color:#172033;min-height:220px;border:1px solid #dfe6ef}
+.previewBox h4{margin:0 0 12px}.bar{height:13px;background:#e8edf4;border-radius:5px;margin:8px 0}.bar.dark{background:#2a3e60}.bar.green{background:#bcefe1}.bar.gold{background:#ffe5a3}
+.offer{margin-top:35px;padding:35px;border-radius:24px;border:1px solid rgba(124,92,255,.35);background:linear-gradient(135deg,rgba(124,92,255,.16),rgba(37,208,166,.07))}
+.offerin{display:flex;align-items:center;justify-content:space-between;gap:25px}
+.offer h2{margin:0}.faq{margin-top:25px}.faq details{border-bottom:1px solid var(--line);padding:17px 0}.faq summary{cursor:pointer;font-weight:800}.faq p{color:var(--muted)}
+.footer{padding:45px 0;color:#7f8ba0;text-align:center;border-top:1px solid var(--line);font-size:13px}
+@media(max-width:800px){
+ .grid2,.videoCard{grid-template-columns:1fr}.hero{padding-top:48px}.cards{grid-template-columns:1fr}.preview{grid-template-columns:1fr}
+ .offerin{flex-direction:column;align-items:flex-start}.screen{transform:none}
+}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="container navin">
+    <div class="brand">Budget<span>Flow</span></div>
+    <a class="navbtn" href="#buy">Get the Planner</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container grid2">
+    <div>
+      <div class="badge">✓ Complete Excel Budget System</div>
+      <h1>Take control of your money <span>without the spreadsheet chaos.</span></h1>
+      <p class="lead">A clean, ready-to-use Personal Budget Planner for tracking income, expenses, savings goals and debt — all inside one organized workbook.</p>
+      <div class="price"><strong>$12.99</strong><small>one-time purchase</small></div>
+      <a id="buy" class="cta" href="https://payhip.com/buy?s=1&qty%5B86zRc%5D=1&cart_links%5B%5D=86zRc">Get the Personal Budget Planner →</a>
+      <div class="subnote">Instant digital download after purchase • Excel workbook</div>
+    </div>
+
+    <div class="mockup">
+      <div class="glow"></div>
+      <div class="screen">
+        <div class="windowbar"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div>
+        <div class="sheet">
+          <div class="sheettop"><b>Budget Dashboard</b><br><small>Automatic summary of your year</small></div>
+          <div class="kpis">
+            <div class="kpi"><b>$8,420</b><span>Total Income</span></div>
+            <div class="kpi"><b>$5,910</b><span>Total Expenses</span></div>
+            <div class="kpi"><b>$2,510</b><span>Net Savings</span></div>
+          </div>
+          <div class="rows">
+            <div class="row"><div class="cell dark"></div><div class="cell ac"></div><div class="cell"></div></div>
+            <div class="row"><div class="cell"></div><div class="cell green"></div><div class="cell"></div></div>
+            <div class="row"><div class="cell"></div><div class="cell gold"></div><div class="cell"></div></div>
+            <div class="row"><div class="cell"></div><div class="cell ac"></div><div class="cell"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <h2>Everything you need in one workbook.</h2>
+    <p class="sectionlead">Built to make everyday money tracking easier, with dedicated sheets for the parts of your finances that matter most.</p>
+    <div class="cards">
+      <div class="card"><div class="icon">📊</div><h3>Budget Dashboard</h3><p>See income, expenses, savings and debt in one quick overview.</p></div>
+      <div class="card"><div class="icon">💳</div><h3>Transactions</h3><p>Log income and expenses with categories, descriptions, dates and amounts.</p></div>
+      <div class="card"><div class="icon">🎯</div><h3>Savings Goals</h3><p>Set targets, track progress and see how much remains for each goal.</p></div>
+      <div class="card"><div class="icon">📅</div><h3>Monthly Budget</h3><p>Plan a month, compare planned vs actual spending and spot overspending.</p></div>
+      <div class="card"><div class="icon">📈</div><h3>Yearly Overview</h3><p>Follow monthly income, expenses, net savings and savings rate.</p></div>
+      <div class="card"><div class="icon">💰</div><h3>Debt Tracker</h3><p>Track balances, payments, interest and payoff estimates.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container grid2">
+    <div class="photo">
+      <img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=1200&q=85" alt="Personal finance planning on a desk" loading="lazy">
+    </div>
+    <div>
+      <div class="badge">Designed for real-life budgeting</div>
+      <h2>Stop guessing where your money goes.</h2>
+      <p class="sectionlead">Add your transactions, set your monthly plan and use the automatic summaries to understand your financial picture faster.</p>
+      <div class="mini">
+        <span class="tag">Excel</span><span class="tag">Income tracking</span><span class="tag">Expense tracking</span>
+        <span class="tag">Savings goals</span><span class="tag">Debt tracking</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <h2>See the planner in action.</h2>
+    <p class="sectionlead">Use a short finance/planner video here to make the product page feel more visual and engaging.</p>
+    <div class="videoCard">
+      <a class="videoVisual" href="https://www.pexels.com/video/close-up-footage-of-a-spreadsheet-7055344/" target="_blank" rel="noopener" aria-label="Watch a finance spreadsheet video">
+        <div class="play">▶</div>
+      </a>
+      <div class="videoText">
+        <div class="badge">Preview</div>
+        <h2>Simple tracking. Clearer decisions.</h2>
+        <p>The workbook is organized so you can move from daily transactions to monthly planning, yearly progress, savings goals and debt tracking without juggling multiple files.</p>
+        <a class="cta" href="https://www.pexels.com/video/close-up-footage-of-a-spreadsheet-7055344/" target="_blank" rel="noopener">Watch preview video →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <h2>What you'll get</h2>
+    <p class="sectionlead">The included workbook contains these ready-made sheets.</p>
+    <div class="preview">
+      <div class="previewBox"><h4>Dashboard</h4><div class="bar dark"></div><div class="bar"></div><div class="bar green"></div><div class="bar"></div><div class="bar gold"></div></div>
+      <div class="previewBox"><h4>Monthly Budget</h4><div class="bar dark"></div><div class="bar"></div><div class="bar"></div><div class="bar green"></div><div class="bar"></div></div>
+      <div class="previewBox"><h4>Savings Goals</h4><div class="bar dark"></div><div class="bar"></div><div class="bar green"></div><div class="bar green"></div><div class="bar"></div></div>
+      <div class="previewBox"><h4>Debt Tracker</h4><div class="bar dark"></div><div class="bar"></div><div class="bar gold"></div><div class="bar"></div><div class="bar"></div></div>
+    </div>
+
+    <div class="offer">
+      <div class="offerin">
+        <div>
+          <h2>Start organizing your finances today.</h2>
+          <p class="sectionlead">Get the complete Personal Budget Planner for <b>$12.99</b>.</p>
+        </div>
+        <a class="cta" href="https://payhip.com/buy?s=1&qty%5B86zRc%5D=1&cart_links%5B%5D=86zRc">Buy for $12.99 →</a>
+      </div>
+    </div>
+
+    <div class="faq">
+      <details><summary>What format is the product?</summary><p>You receive an Excel workbook (.xlsx) with multiple connected budgeting sheets.</p></details>
+      <details><summary>What is included?</summary><p>Start Here, Dashboard, Transactions, Monthly Budget, Yearly Overview, Savings Goals, Debt Tracker and Settings.</p></details>
+      <details><summary>How do I receive it?</summary><p>After payment, your Payhip product page can provide the downloadable workbook automatically.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">© 2026 BudgetFlow • Digital product • Personal Budget Planner</div>
+</footer>
+</body>
+</html>
